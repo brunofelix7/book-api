@@ -1,8 +1,8 @@
 plugins {
 	id("org.springframework.boot") version "3.3.1"
 	id("io.spring.dependency-management") version "1.1.5"
-	kotlin("plugin.jpa") version "1.9.24"
 	kotlin("jvm") version "1.9.24"
+	kotlin("plugin.jpa") version "1.9.24"
 	kotlin("plugin.spring") version "1.9.24"
 }
 
@@ -17,15 +17,33 @@ java {
 
 repositories {
 	mavenCentral()
+	google()
 }
 
 dependencies {
+	// Spring Data JPA
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+
+	// Spring Web
 	implementation("org.springframework.boot:spring-boot-starter-web")
-	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
-	implementation("org.jetbrains.kotlin:kotlin-reflect")
+
+	// Spring DevTools
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
-	runtimeOnly("com.h2database:h2")
+
+	// Jackson
+	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+
+	// Kotlin Reflect
+	implementation("org.jetbrains.kotlin:kotlin-reflect")
+
+	// Flyway
+	implementation("org.flywaydb:flyway-core")
+	implementation("org.flywaydb:flyway-mysql")
+
+	// MySQL Connector
+	runtimeOnly("mysql:mysql-connector-java:8.0.28")
+
+	// Tests
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
