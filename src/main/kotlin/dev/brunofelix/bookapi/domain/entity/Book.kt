@@ -8,19 +8,19 @@ import java.math.BigDecimal
 data class Book(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long? = null,
+    val id: Int? = null,
 
     @Column
-    var name: String,
+    val name: String,
 
     @Column
-    var price: BigDecimal,
+    val price: BigDecimal,
 
     @Column
     @Enumerated(EnumType.STRING)
-    var status: BookStatus? = null,
+    val status: BookStatus? = null,
 
     @ManyToOne
     @JoinColumn(name = "customer_id")
-    var customer: Customer? = null
+    val customer: Customer? = null
 )

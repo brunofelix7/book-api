@@ -19,7 +19,7 @@ class CustomerService(
         repository.save(customer)
     }
 
-    fun delete(id: Long) {
+    fun delete(id: Int) {
         if (!repository.existsById(id)) {
             throw Exception()
         }
@@ -34,7 +34,7 @@ class CustomerService(
         }
     }
 
-    fun findById(id: Long): Customer {
+    fun findById(id: Int): Customer {
         return repository.findById(id).orElseThrow()
     }
 }

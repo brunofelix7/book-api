@@ -6,11 +6,11 @@ import jakarta.persistence.*
 data class Customer(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id: Long? = null,
+    val id: Int? = null,
 
     @Column
-    var name: String,
+    val name: String,
 
     @Column
-    var email: String
+    val email: String
 )
