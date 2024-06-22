@@ -15,14 +15,14 @@ class CustomerController(
 ) {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    fun create(@RequestBody customer: PostCustomerRequest) {
-        service.create(customer.toCustomer())
+    fun create(@RequestBody request: PostCustomerRequest) {
+        service.create(request.toCustomer())
     }
 
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    fun update(@PathVariable id: Int, @RequestBody customer: PutCustomerRequest) {
-        service.update(customer.toCustomer(id))
+    fun update(@PathVariable id: Int, @RequestBody request: PutCustomerRequest) {
+        service.update(request.toCustomer(id))
     }
 
     @DeleteMapping("/{id}")
