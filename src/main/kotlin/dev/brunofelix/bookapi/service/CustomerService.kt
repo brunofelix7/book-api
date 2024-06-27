@@ -34,7 +34,5 @@ class CustomerService(
         }
     }
 
-    fun findById(id: Int): Customer {
-        return repository.findById(id).orElseThrow()
-    }
+    fun findById(id: Int): Customer  = repository.findById(id).orElseThrow()
 }

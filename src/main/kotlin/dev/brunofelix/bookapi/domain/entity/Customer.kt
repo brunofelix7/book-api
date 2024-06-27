@@ -6,7 +6,7 @@ import jakarta.persistence.*
 data class Customer(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Int? = null,
+    var id: Int? = null,
 
     @Column
     val name: String,

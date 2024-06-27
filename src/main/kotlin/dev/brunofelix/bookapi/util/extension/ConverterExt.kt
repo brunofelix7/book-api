@@ -2,6 +2,7 @@ package dev.brunofelix.bookapi.util.extension
 
 import dev.brunofelix.bookapi.controller.request.PostBookRequest
 import dev.brunofelix.bookapi.controller.request.PostCustomerRequest
+import dev.brunofelix.bookapi.controller.request.PutBookRequest
 import dev.brunofelix.bookapi.controller.request.PutCustomerRequest
 import dev.brunofelix.bookapi.domain.entity.Book
 import dev.brunofelix.bookapi.domain.entity.Customer
@@ -21,5 +22,15 @@ fun PostBookRequest.toBook(customer: Customer): Book {
         price = this.price,
         status = BookStatus.ACTIVATED,
         customer = customer
+    )
+}
+
+fun PutBookRequest.toBook(book: Book): Book {
+    return Book(
+        id = book.id,
+        name = this.name,
+        price = this.price,
+        status = book.status,
+        customer = book.customer
     )
 }

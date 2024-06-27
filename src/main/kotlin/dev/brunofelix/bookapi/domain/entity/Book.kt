@@ -18,9 +18,9 @@ data class Book(
 
     @Column
     @Enumerated(EnumType.STRING)
-    val status: BookStatus? = null,
+    var status: BookStatus? = null,
 
     @ManyToOne
     @JoinColumn(name = "customer_id")
-    val customer: Customer? = null
+    var customer: Customer? = null
 )
