@@ -13,7 +13,7 @@ class CustomerService(
     }
 
     fun update(customer: Customer) {
-        if (!repository.existsById(customer.id!!)) {
+        if (!repository.existsById(customer.id ?: 0)) {
             throw Exception()
         }
         repository.save(customer)
@@ -34,5 +34,7 @@ class CustomerService(
         }
     }
 
-    fun findById(id: Int): Customer  = repository.findById(id).orElseThrow()
+    fun findById(id: Int): Customer {
+        return repository.findById(id).orElseThrow()
+    }
 }
