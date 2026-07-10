@@ -2,12 +2,9 @@ package dev.brunofelix.bookapi.controller
 
 import dev.brunofelix.bookapi.controller.request.PostBookRequest
 import dev.brunofelix.bookapi.controller.request.PutBookRequest
-import dev.brunofelix.bookapi.controller.request.PutCustomerRequest
-import dev.brunofelix.bookapi.domain.entity.Book
 import dev.brunofelix.bookapi.service.BookService
 import dev.brunofelix.bookapi.service.CustomerService
 import dev.brunofelix.bookapi.util.extension.toBook
-import dev.brunofelix.bookapi.util.extension.toCustomer
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*
 

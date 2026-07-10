@@ -1,6 +1,6 @@
 package dev.brunofelix.bookapi.service
 
-import dev.brunofelix.bookapi.domain.entity.Customer
+import dev.brunofelix.bookapi.domain.model.Customer
 import dev.brunofelix.bookapi.repository.CustomerRepository
 import org.springframework.stereotype.Service
 

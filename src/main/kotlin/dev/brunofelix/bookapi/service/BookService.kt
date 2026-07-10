@@ -1,7 +1,6 @@
 package dev.brunofelix.bookapi.service
 
-import dev.brunofelix.bookapi.domain.entity.Book
-import dev.brunofelix.bookapi.domain.entity.Customer
+import dev.brunofelix.bookapi.domain.model.Book
 import dev.brunofelix.bookapi.domain.enums.BookStatus
 import dev.brunofelix.bookapi.repository.BookRepository
 import org.springframework.stereotype.Service

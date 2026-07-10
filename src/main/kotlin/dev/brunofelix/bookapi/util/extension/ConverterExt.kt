@@ -4,8 +4,8 @@ import dev.brunofelix.bookapi.controller.request.PostBookRequest
 import dev.brunofelix.bookapi.controller.request.PostCustomerRequest
 import dev.brunofelix.bookapi.controller.request.PutBookRequest
 import dev.brunofelix.bookapi.controller.request.PutCustomerRequest
-import dev.brunofelix.bookapi.domain.entity.Book
-import dev.brunofelix.bookapi.domain.entity.Customer
+import dev.brunofelix.bookapi.domain.model.Book
+import dev.brunofelix.bookapi.domain.model.Customer
 import dev.brunofelix.bookapi.domain.enums.BookStatus
 
 fun PostCustomerRequest.toCustomer(): Customer {

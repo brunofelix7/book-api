@@ -1,4 +1,4 @@
-package dev.brunofelix.bookapi.domain.entity
+package dev.brunofelix.bookapi.domain.model
 
 import dev.brunofelix.bookapi.domain.enums.BookStatus
 import jakarta.persistence.*
