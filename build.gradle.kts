@@ -1,9 +1,9 @@
 plugins {
-	id("org.springframework.boot") version "3.5.0"
-	id("io.spring.dependency-management") version "1.1.5"
-	kotlin("jvm") version "1.9.24"
-	kotlin("plugin.jpa") version "1.9.24"
-	kotlin("plugin.spring") version "1.9.24"
+	id("org.springframework.boot") version "4.1.0"
+	id("io.spring.dependency-management") version "1.1.6"
+	kotlin("jvm") version "2.4.0"
+	kotlin("plugin.jpa") version "2.4.0"
+	kotlin("plugin.spring") version "2.4.0"
 }
 
 group = "dev.brunofelix"
@@ -11,7 +11,7 @@ version = "1.0.0"
 
 java {
 	toolchain {
-		languageVersion = JavaLanguageVersion.of(17)
+		languageVersion = JavaLanguageVersion.of(21)
 	}
 }
 
